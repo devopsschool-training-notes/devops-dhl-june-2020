@@ -180,11 +180,172 @@ Concept of Git Workspace Anatomy?
 git checkout master	# for latest
 git checkout 94109a51d2dd34e0f42a2255aee9e81add9fd9df	# for Older
 git status	
+=========================================================
+=========================================================
 
 
-====
+
+
+
+
+
+============
 Github
-Branch
+	Github Server have a capability such as
+	- Hosting Multiple Repo
+	- GUI
+	- Issues
+	- Wiki
+	- RBAC
+	- Org
+	- This
+	- That
+
+===================
+Github RBAC
+----------------
+Admin would do
+- Create a ORG	DONE	https://github.com/dhl-test
+- Create a TEAM 		DONE
+- Create a Project		DONE
+- Create a repo in Project
+- Create a TEAM to REPO OR Project.
+
+Dev would do
+- Clone repo
+- Add and Commit and Branch - merge - delete - Do whatever
+- Push it.
+
+====================================
+Assignment 1
+- Register at github.com
+- Get your ID
+- Create a Remote repo at github
+- Push your local repo to remote repo
+
+Assignment 2
+- Give me your github iD
+- I would add in you my repo with write access to all
+- We would do clone to one common repo - https://github.com/devopsschool-demo-temporary/dhl-july
+- We would do pull and push to our common repo as a team.
+
+==========================================================
+==========================================================
+Branching & Merging
+-----------------------------
+Why Branch???
+-----------------
+BUG fixing - Dont want to upset main branch
+Enahancement  - Dont want to upset main working branch
+Diff team - We create a branch
+Diff Geo - We create a branch.
+===================================
+BRANCHING IS FREE in Git.
+
+
+Types of branch?
+- -------
+Local Branch - default - master - RW
+Remote Branch - RO
+Temp Branch
+	Checkout Remote branch
+	Checkout Specific Commit id
+PULL === FETCH + MERGE
+=================================
+Branching and Merging Stratergy
+==================================
+- Fast forward
+- Recursive
+- Cherry pIck
+
+
+ 506  ls
+  507  clear
+  508  ls
+  509  git branch -a
+  510  ls
+  511  clear
+  512  git pull origin master
+  513  clear
+  514  touch fetch1.txt;git add .;git commit -m"adding"
+  515  git push origin master
+  516  clear
+  517  git branch
+  518  git branch fea1
+  519  git branch
+  520  ls
+  521  clear
+  522  git branch
+  523  git diff fea1
+  524  git checkout fea1
+  525  clear
+  526  git branch
+  527  ls
+  528  touch fea1.txt;git add .;git commit -m"fea1"
+  529  touch fea2.txt;git add .;git commit -m"fea2"
+  530  clear
+  531  git log --oneline
+  532  ckear
+  533  clear
+  534  git checkout master
+  535  git log --oneline
+  536  ar
+  537  clear
+  538  ls
+  539  git merge fea1
+  540  ls
+  541  clear
+  542  ls
+  543  git diff fea1
+  544  git checkout fea1
+  545  clear
+  546  touch fea3.txt;git add .;git commit -m"fea3"
+  547  touch fea4.txt;git add .;git commit -m"fea4"
+  548  git checkout master
+  549  touch master1.txt;git add .;git commit -m"master1"
+  550  clear
+  551  touch master2.txt;git add .;git commit -m"master2"
+  552  clear
+  553  s
+  554  git checkout fea1
+  555  touch fea5.txt;git add .;git commit -m"fea5"
+  556  clear
+  557  git log --oneline
+  558  clear
+  559  git checkout master
+  560  git log --oneline
+  561  clear
+  562  git diff fea1
+  563  clear
+  564  git merge fea1
+  565  git checkout fea1
+  566  clear
+  567  touch fea6.txt;git add .;git commit -m"fea6"
+  568  touch fea7.txt;git add .;git commit -m"fea7"
+  569  touch fea8.txt;git add .;git commit -m"fea8"
+  570  clear
+  571  git log --oneline
+  572  clear
+  573  git checkout master
+  574  git cherry-pick 42d4033
+  575  ls
+  576  clear
+  577  git branch
+  578  git push origin fea1
+  579  history
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
