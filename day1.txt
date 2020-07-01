@@ -1,0 +1,214 @@
+Lab - AWS
+==================
+	START	QB1		LUNCH		QB2	
+MTIME - 9 AM 	10.30		12PM		3PM				
+ITIME - 6.3 	8:00		9:30AM		12:30
+				-------
+				1 HOUR
+==========================================================
+Prod - DHLX
+====================
+Objective - 
+		DEVOPS - 
+			Immediate Release
+			Quality Release
+			Cost Reduction
+===================================================
+Evolution of Software Deliery?
+AKA consuming a software.
+====================================
+1990 - 2010		2010 - 2015		2015 - 2020
+--------------------------------------------------------------
+- CD			www			Living				
+- Advance payment	NO Adv Payment		NO Adv Payment
+- Buy -> Owner		NO OWNER		NO OWNER	
+- Exec			Browsers		Devices
+- Desktop		VMS
+-----------
+100 PEOPLE-100 LIC COP	1 COPY for all People	1 COPY for all People
+
+Release
+-------------------------------------------------------------------
+1 Year 
+6 Month			2 WEEKS			20 mins
+						2 mins
+----------------------------------
+-------------------------------------------------------------------
+Waterfall		Agile			DevOps	(SRE)	--> DevSecOps -----
+-----------------------------------------
+Monolithic 		SOA			Microservices
+-----------------------------------------
+Desktop			Vms			Container
+1 day			1 hours			1 Second
+
+
+
+
+====================================================
+DHLX
+
+	Software Dev Model --------> Waterfall --> Agile -> DevOps
+	Software Dev Architecture -> Monolithic --> SOA -> Microservices
+	Software Dev Platform -----> Physical Server -> Vms -> Container
+	Technoglogy
+			FrontEnd
+			Backend
+			MiddleWare
+================================================================
+TEAM & Their Responsibility
+=================================
+Workflow in the Software Dev From First Step to the Last Step.
+====================================================================
+Plan -> 			Jira - Confulence			
+Code mgmt -> 			Git 			[SESSION]		
+Code Analysis -> 
+	Peer Code Review	Gerrit
+	Static Code Review	SonarQube
+Build Mgmt			Maven			[SESSION]
+Unit Testing			Junit			[SESSION] - DEMO
+Packaging
+	System Package		exe - InstallShield
+	App Package		jar 
+Package Mgmt			Artifactory		[SESSION]
+Deployment			Ansible			[SESSION]
+Acceptance Testing		Selenium		[SESSION] - DEMO
+Coverage			Jacoco			[SESSION] - DEMO		
+-----------
+CI ----------------------------------------------------
+			Jenkins				[SESSION]
+
+Additional Tools - [SESSION] - DEMO - Selenium Grid, Jmeter, UFT
+
+
+	Release
+Deployment			Ansible		
+Monitering
+	- Log			Splunk
+	- Security		MANY
+	- Infra			Datadog
+	- APM			Newrelic
+	- RUM			MANY		
+====================================================================
+====================================================================
+What is Git?
+	Source Code mgmt tool	
+	Versioning of Source Code [Any file which can open in Notedpad]	
+	Binary - PDF - Image - WORD - Movie - Exe
+	Would give you info
+			WHO 
+			What
+			When
+			Why
+			Where 
+	Free and Open Source
+	Dev by - Linus Torvald
+	--------------------------
+	Git is distributed.
+
+Other tools
+----------------
+RCS -> CVS - SVN
+Perforce - TFS - VSS - ClearCase
+
+Server-Client VS distributed
+=======================================
+
+
+How to install git?
+- Windows	- Exe From git-scm.com
+				- git-cmd for windows
+				- git-bash for SUPPORTING LINUX COMMAND IN WINDOWS
+- Mac		- DMG From git-scm.com 
+- Linux		- CMD
+		RHEL - sudo yum install git
+		ubuntu - sudo apt-get install git
+
+ 501  pwd
+  502  start .
+  503  cd /e
+  504  pwd
+  505  start .
+  506  mkdir dhl
+  507  clear
+  508  cd dhl/
+  509  start .
+  510  pwd
+  511  history
+=============================================
+Basic Workflow with Git.
+
+Step 1: Create a repo				DONE
+git init
+
+Step 2: Generate a Source code using IDE	DONE	
+
+Step 3: Add a Code into Git [ From Working dir to Staging area ]	
+git add filename
+
+[ONE TIME]
+git config user.name "Rajesh Kumar"
+git config user.email "devops@rajeshkumar.xyz"
+git config --list
+
+Step 4: Commit a code into git. [ From Staging to Repository ]
+git commit -m"adding first version"
+
+Step 5: See a commited a file
+$ git log
+commit 94109a51d2dd34e0f42a2255aee9e81add9fd9df (HEAD -> master)
+Author: Rajesh Kumar <devops@rajeshkumar.xyz>
+Date:   Wed Jul 1 11:08:05 2020 +0530
+
+    adding first version
+
+94109a51d2dd34e0f42a2255aee9e81add9fd9df = Commit ID aka Checksum. == SHA1
+
+Step 6
+$ git show 94109a51d2dd34e0f42a2255aee9e81add9fd9df
+commit 94109a51d2dd34e0f42a2255aee9e81add9fd9df (HEAD -> master)
+Author: Rajesh Kumar <devops@rajeshkumar.xyz>
+Date:   Wed Jul 1 11:08:05 2020 +0530
+
+    adding first version
+
+diff --git a/file1.java b/file1.java
+new file mode 100644
+index 0000000..e69de29
+
+Concept of Git Workspace Anatomy?
+=======================================
+git checkout master
+git checkout 94109a51d2dd34e0f42a2255aee9e81add9fd9df
+git status
+
+
+====
+Github
+Branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
