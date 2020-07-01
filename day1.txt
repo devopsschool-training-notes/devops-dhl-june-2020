@@ -177,9 +177,9 @@ index 0000000..e69de29
 
 Concept of Git Workspace Anatomy?
 =======================================
-git checkout master
-git checkout 94109a51d2dd34e0f42a2255aee9e81add9fd9df
-git status
+git checkout master	# for latest
+git checkout 94109a51d2dd34e0f42a2255aee9e81add9fd9df	# for Older
+git status	
 
 
 ====
