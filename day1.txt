@@ -334,9 +334,24 @@ Branching and Merging Stratergy
   578  git push origin fea1
   579  history
 
+===================================================
+===================================================
+Resolving a Real Merge Conflict
+Git Undoing
+	= getting rid of new files from working dir
+	- git clean -f d-
 
 
+	= From Staging to working
+	- git reset filename
+	
+	==from repo - you should always revert back..NOT UNDO...undo is very dangergious.
+	using git revert
+======================================
 
+e521547 (HEAD -> master) Revert "adding bad commit"
+e5eff10 adding bad commit
+1cf0532 a
 
 
 
