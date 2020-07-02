@@ -9,7 +9,8 @@ What is Maven?
 		-- Playform independent
 	Free and Open source
 	Dev by Apache.
-	Plugins based
+	Plugins based	
+	
 
 Psucode of Build mgmt...
 =============================
@@ -130,7 +131,7 @@ How to install maven?
 ======================================
 Workflow with Maven from FIRST
 ======================================
-Step 1 -  Create a proj dir structurre
+Step 1 -  Create a proj dir structure
 mvn archetype:generate
 -DgroupId=com.companyname.software
 -DartifactId=financialService
@@ -165,12 +166,142 @@ How to install JDk 8 in Linux?
 $ sudo yum install java-1.8.0-openjdk-devel
 
 How to download Maven?
+$ sudo yum install wget
 $ wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip
 $ sudo yum install unzip
 $ unzip apache-maven-3.6.3-bin.zip
-$ export PATH=$PATH:/Maven_home/bin
+$ export PATH=$PATH:/home/centos/apache-maven-3.6.3/bin
+
+======================================================
+======================================================
+How to manage a Dependency of a project in Maven?
+============================================
+Step 1. Dependent Lib you keep in pom.xml
+-------------
+
+What is pom.xml?	
+------------------
+a file 
+which contains all required config for your project.
+Such as.
+	groupid
+	artif
+	name
+	version
+	website
+	copyright
+	dependency
+	properties
+	-----
+	plugins
+	profiles
+	many more...
+
+Step 2. Maven would Check in Local Repo = C:\Users\Rajesh Kumar\.m2\repository
 
 
+
+Step 3. If "Local Repo" is not having that - Go to "central repo" and then download back to local repo and use in JVM.
+
+https://repo.maven.apache.org/maven2/
+
+=============================================================
+=============================================================
+What is Artifactory
+	- Store packages
+	- Versioning of the packages.
+	- dev in Java
+		- JRE
+
+What kind of Packages?
+----------------------------
+https://www.jfrog.com/confluence/display/JFROG/Repository+Management
+
+
+Why we need this?
+	- Securing a package
+	- Having a defined enterprise process
+	- role based access to the packages
+	- Durability
+	- Easy admin activity
+		- cleanup
+		- backup
+	
+How to install Artifactory?
+==================================
+13.232.174.143
+centos
+	---
+How to install JDk 8 in Linux?
+$ sudo yum install java-1.8.0-openjdk-devel
+
+How to download Maven?
+$ sudo yum install wget
+
+http://13.232.174.143:8082/ui/
+======================================
+Why Artifactory
+-----
+Upload
+=================================================
+1. Create a repo	DONE
+
+2. get a access to upload
+admin
+admin123
+
+3. Add repo location in pom.xml	DONE
+
+4. Add access in setting.xml
+
+     <server>
+		<id>central</id>
+		<username>admin</username>
+		<password>admin123</password>
+</server>
+### Special ID element in the POM.xml and setting.xml must match.
+
+
+5. mvn deploy
+
+Example Project - https://github.com/scmgalaxy/helloworld-java-maven
+
+How to download using Artifactory
+=======================================
+Step 1 - Do you have 2 Module????
+
+Step 2 - Do you have one module dependent on another module?
+
+Step 3.  Did you modify a pom.xml with dependent lib?
+
+Step 4 - Did you modify setting.xml mirror element to go to Artifactory?
+
+
+
+Repo to Upload - http://13.232.174.143:8081/artifactory/list/all
+Repo Group to Download - http://13.232.174.143:8081/artifactory/dhl-all/
+
+1. Create 2 project...
+	Name1 - firstname
+	Name2 - lastname
+2. Add pom.xml entry for UPLOAD to artifactory repo
+
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-29-73.ap-south-1.compute.internal-releases</name>
+        <url>http://13.232.174.143:8081/artifactory/list/all</url>
+    </repository>
+    <snapshotRepository>
+        <id>central</id>
+        <name>ip-172-31-29-73.ap-south-1.compute.internal-snapshots</name>
+        <url>http://13.232.174.143:8081/artifactory/list/all</url>
+    </snapshotRepository>
+</distributionManagement>
+
+3. Name1 is dependent on Name2 prj - Add entry in pom.xom
+
+3. Run Name1...to check dependency download.
 
 
 
