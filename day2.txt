@@ -157,6 +157,22 @@ Step 4 - package
 
 $ mvn package
 
+Vivian - 	15.206.205.8		centos	centos123
+Jahabar		35.154.11.108		centos	centos123
+Annam  		13.126.149.183		centos	centos123
+
+How to install JDk 8 in Linux?
+$ sudo yum install java-1.8.0-openjdk-devel
+
+How to download Maven?
+$ wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip
+$ sudo yum install unzip
+$ unzip apache-maven-3.6.3-bin.zip
+$ export PATH=$PATH:/Maven_home/bin
+
+
+
+
 
 
 
