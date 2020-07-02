@@ -1,0 +1,164 @@
+What is Maven?
+========================
+	Project Flow mgmt tool
+		- Build mgmt 
+	Automation KIT for Dev and QA
+	For JAVA Project
+	Written in Java
+		-- JVM -> JRE or JDK
+		-- Playform independent
+	Free and Open source
+	Dev by Apache.
+	Plugins based
+
+Psucode of Build mgmt...
+=============================
+Software --> modules --> 20
+	- Each module create dir str
+	- Each Module Code Download
+	- Each Module Download dependent lib 
+	- Compile
+	- UT
+	- TEST
+	- Package
+	- verify....	
+	- Upload to Artifactory....
+	====================================
+	EVERY TIME U CHANGE a CODE
+		- WORKSTATION of Dev and QA
+		- CI SERVER
+	=======================================
+	20 times....
+===================================================
+	Build mgmt tool.
+
+
+other tools
+Makefile --> Ant --> Maven --> Gradle
+msbuild - nnant - pybuild - rake
+
+How maven works!!!!! Maven Architecture
+============================================
+All Feature in Maven comes from Plugins...
+
+
+Core
+	Core plugins dev by Apache
+	Communty plugins dev by community
+	---------------
+	100+++
+=========================================
+Lifecyle of Human Being???
+===================================
+			Phases
+----------------------------------------------------
+Born -> Kid --> Teen --> Young -> Mid -> Old -> DiE	= ONE CYCLE
+
+Software project has a lifecycle.
+			Phases
+----------------------------------------------------
+===========================================================
+compile -> UT -> package -> test -> release		= ENDLESS CYCLE
+--------------------------------------------------------------------
+CTO --> 100 Product - 100 Diff LifeCycle...
+
+	- Each module create dir str
+	- Each Module Code Download
+	- Each Module Download dependent lib 
+	- Compile
+	- UT
+	- TEST
+	- Package
+	- verify....	
+	- Upload to Artifactory....
+=======================================================
+	maven has automated everything.
+=========================================================
+Maven has 3 LIFECYCLE(Built-in) to manaage a software project...
+https://maven.apache.org/ref/3.6.3/maven-core/lifecycles.html
+
+==========================================================================
+DHlX...
+
+PHASES		How to reach to that Phase 
+		of software project????
+
+		goal		Goal in written in plugins
+----------------------------------------------------------------
+compile		compile		Core plugins
+test		test		Core plugins
+package		package		Core plugins
+verify		verify		Core plugins
+install		install		Core plugins
+
+============================================================
+projectName - dhlx
+groupid
+artifactid
+version		
+		SNAPSHOT - NOT Stable - 1.0-SNAPSHOT	1.0.1-SNAPSHOT
+		RELEASE - Stable	1.0	1.0.1	
+
+
+packaging	- jar - war - ear - pom
+website-url
+
+What is groupid?
+---------------------------
+
+microsoft
+	msword		artifactid
+	msexcel		artifactid
+	mspre		artifactid
+	msaccess	artifactid	
+====================================
+com.microsoft.software.		=== groupid
+com.microsoft.software.msword
+com.microsoft.software.msexcel
+com.microsoft.software.mspre
+com.microsoft.software.msaccess
+org.microsoft.software.
+===============================================
+How to install maven?
+=========================
+	- JDK ( NO JRE) ISNTALLED
+	- JAVA_HOME env must be set		C:\tools\Java\jdk1.8.0_231
+	- JAVA_HOME/BIN must be set in PATH env var.	C:\tools\Java\jdk1.8.0_231\bin
+	- Download Maven Zip		https://maven.apache.org/download.cgi
+	- Extract it			C:\tools\maven
+	- MAVEN_HOME/bin must be set in PATH env var.	C:\tools\maven\bin
+======================================
+Workflow with Maven from FIRST
+======================================
+Step 1 -  Create a proj dir structurre
+mvn archetype:generate
+-DgroupId=com.companyname.software
+-DartifactId=financialService
+-DarchetypeArtifactId=maven-archetype-quickstart
+-DinteractiveMode=false
+
+archetype = core plugins
+https://maven.apache.org/archetype/maven-archetype-plugin/index.html
+
+generate = goal name
+archetypeArtifactId = https://maven.apache.org/archetypes/index.html 
+
+mvn archetype:generate -DgroupId=com.companyname.software -DartifactId=financialService -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.dhl.software -DartifactId=chat -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Step 2 - compile 
+$ mvn compile
+
+Step 3 - test 
+$ mvn test
+
+Step 4 - package
+
+$ mvn package
+
+
+
+
+
+
