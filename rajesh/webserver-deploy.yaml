@@ -12,7 +12,7 @@
     copy: dest=/var/www/html/ src="index.html"
   - name: Download DHL Package
     get_url:
-      url: http://15.206.169.2:8080/job/Archive/lastSuccessfulBuild/artifact/target/yoodle-5.0.0.jar
-      dest: /var/www/html/yoodle-5.0.0.jar
+      url: http://apache.mirrors.hoobly.com/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.5.56.zip
+      dest: /var/www/html/apache-tomcat-8.5.56.zip
 ...
 
