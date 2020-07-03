@@ -10,5 +10,10 @@
     file: dest=/opt/test.txt state=touch
   - name: copy a file
     copy: dest=/var/www/html/ src="index.html"
+  - name: Download DHL Package
+    get_url:
+      url: http://15.206.169.2:8080/job/Archive/lastSuccessfulBuild/artifact/target/yoodle-5.0.0.jar
+      dest: /var/www/html/yoodle-5.0.0.jar
+      mode: '06444'
 ...
 
