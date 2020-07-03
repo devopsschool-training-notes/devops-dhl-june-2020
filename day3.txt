@@ -169,24 +169,222 @@ http://15.206.169.2:8082/ui/api/v1/download?repoKey=all&path=com%2Fdhl%2Fsoftwar
 
 copy into
 /var/www/html/yourname.jar
+====================================================================
+====================================================================
+====================================================================
+What is Jenkins?
+------------------------------
+	CI tool.
+	Cont Integ
+	Free
+	Open Source
+	Writtten in Java
+		- platform indp
+		- JRE
+	Paid - Jenkins Cloudbees
+	Variant
+		- Jenkins Open Source
+		- Enterprise Jenkins by Cloudbees
+		- Blue Ocean
+		- JenkinX - Container
+	All Feature in jenkins comes from???
+	- Plugins
+		- Community - Free --- 100s
+		- Cloudbeess - Paid -- 10s
+
+Jenkins Open Source VS Jenkins Open Source
+------------------------------------------
+
+What is CI?
+--------------------
+Auto Build + Auto Testing
+------------------------
+	Imm Feedback.
+
+Code -> Analyze -> Build -> UT -> Package -> Archive -> Deploy -> AT -> Coverage 
+---------------------------------------------------------------------------------
+Git  -> Sonar   -> Maven -> Junit -> Jar  -> Artifactry-> Ansible ->Sel -> Jacoco			
+									If All Passed - Release
+									If one failed - Repeat
+===================================================================================
+
+Which integ continously
+	- All TEAM
+	- All Process
+	- All Tools
+	-----------------
+	@ Common PLatform.
+	=====================
+	Jenkins
+		Integ all tools		DONE
+		Schedule		DONE
+		Imm Feedback - Notification	- EMAIL - PIPELINE
+		Dashboarding		DONE
+======================================================================
+Why jenkins
+========================================================================
+Other tools - 
+Teamcity - Bamboo - uBuild - CircleCI -
+==========================================
+Architecture of Jenkins
+==========================================
+https://www.devopsschool.com/blog/jenkins-architecture-explained/
+
+How to installl?
+-----------------------
+	- JAVA
+	- WAR file -
+	Centos -
+https://www.devopsschool.com/tutorial/jenkins/jenkins-installation-and-configuration.html
+15.206.169.2
+
+=====================================================================
+Basic Workflow in Jenkins
+=====================================================================
+Secret formula
+=========================================
+Q1. What is your technology?
+		- JAVA
+	Which version - 8
+Q2. Where is your source code?
+		- Git
+		https://github.com/devops-school/helloworld-java-maven
+		USER ID n PASS
+Q3. How often you want this job to be trigger?
+		- Hourly
+Q4. What is your builder?		
+		- Maven
+			- pom.xml -
+				compile
+				test
+				package
+				install
+				deploy
+
+Q5 Whom you want this feedback to be deliverd and How?
+		- rajesh@scmgalaxy.com - Email
+==================================================================
+		Integ all tools	---- NOW
+		Schedule
+		Imm Feedback - Notification
+		Dashboarding				
+===================================================================
+Code -> Analyze -> Build -> UT -> Package -> Archive -> Deploy -> AT -> Coverage 
+---------------------------------------------------------------------------------
+Git  -> Sonar   -> Maven -> Junit -> Jar  -> Artifactry-> Ansible ->Sel -> Jacoco
+=================================================================================
+DONE	NA	  DONE	    DONE    DONE
+				jenkins
+
+
+
+How to deploy a Package using maven to Artifactory?
+---------------------
+S1 - Add a repo in pom.xml
+S2 - acccess to settting.xml
+S3 - mvn deploy
+Alternative
+- Plugins
+
+
+- Allocation a Job to Specific Node.
+- Authentication & Authrization
+
+
+15.206.169.2
+ http://15.206.166.202:8081/repository/all/com/scmgalaxy/mavensample/yoodle/5.0.0/yoodle-5.0.0.jar: 
+
+How to add new node?
+----------------------
+	- JAVA
+	- IP	3.6.36.140
+	- User	centos
+	- Pass	centos123
+	
+What is Code Coverage ?
+java - jacoco(dynamic) - cobertura(static)
+DOT - ncover
+================================================
+	CLASS - 100 - Method - 500 - Line 1000
+	----------------------------------------
+UT(Dev)  100   - 500 - 1000
+AT(QA)   100   - 500 - 1000
+
+
+UT(Dev)  100 Class - 50 CLASS
+AT(QA)   100 CLASS - 50 CLASS === 50%
+=======================================
+QA manager ---->5 mins...REPORTS
+===========================================
+
+SRC -> CLASSS <---- TEST CASES ---
+				TEST RESULT
+	------
+	jacoco				exec --> CSV - HTMl - JENKINS
+					Coverage Report
+======================================================================
+How to integrate???? Each job?
+-------------------------------------
+How to trigger?
+========================================
+Trigger a JOB AT Fixed time = Build periodically
+Trigger a JOB AT Fixed time But only if SCM changes == Poll SCM
+Trigger a Job through external script/tools = Trigger builds remotely (e.g., from scripts)
+Trigger a Job if other Jobs are done = Build after other projects are built
+Trigger a Job based on pUSH to github = GitHub hook trigger for GITScm polling
+========================================
+How to create PIPELINE?
+========================================
+Not Lazy = Manual Way			==== Build Pipeline 
+
+Lazy = Code == Write code for Pipeline 	==== PIPELINE
+=========================================================
+You can do through CODE.
+========================
+		DSL - GROOVY
+		jenkinsfile-dev
+		jenkinsfile-qa
+		jenkinsfile-ops
+		anyfile
+		https://www.jenkins.io/doc/book/pipeline/
+===============================================================================
+===============================================================================
+CI
+
+CD ---
+	Cont Delivery	->  YES(Delivery) - NO(NOT Delivery)
+	Cont Deployment	-> NO ONE IS ASKING - Can you deploy/
+
+Docs
+=================================================
+DevOps@Rajeshkumar.xyz
+==========================
+What You are doing?
+Why you are doing?
+What is input?
+What expected output?
+Challenges?
+=====================================================
+JACOCO
+------
+=====================================================================================
+Where do we get Training Materials
+==================================
+Slides
+PDF
+Videos
+Notes
+Tutorials
+Blogs
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+
+Recordings - Casey 
+How to reach out to me?
+==========================
+www.RajeshKumar.xyz
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Continuous Integration using Jenkins
