@@ -1,0 +1,192 @@
+Continuous Deployment using Ansible
+===================================
+1 Hour For me		Discussion
+1 Hour For you		Demo
+==================
+What is Ansible?
+=====================
+	Config mgmt tool
+	Deployment mgmt tool
+	We user Ansible to Deploy our package to Multple Server(s)
+	Free and OPen Source
+	Written in Python
+	From Redhat
+	Paid - Ansible Tower
+	Its DSL
+	   Compiled --> Interpreted ---> DSL
+Why Ansible?
+=====================
+	Ansible is Platform ind
+	Ansible is EASy to learn | share | test | debug | extend
+		Comparing
+		Java - python - perl - 
+	Ansible can manage larger number of Change mgmt at a time. - Parrell...
+	Ansible is IDEOMPOTENT
+================================================
+How Ansible Works!!! - Ansible Architecture....
+================================================
+ACS				ARS
+------------------------------------------------
+Linux				ANY
+64 BIT				ANY
+Ansible				NA (Agent less)
+	 --------------Windows--> HTTP using winrm
+	 --------------LINUX--> SSH using ssh
+Python				Python(Linux) + PS3.0/Winrm/Dotnet(Windows)	
+========================================================
+ACS - Ansible Control Server
+ARS - Ansible Remote Server
+=============================================
+Components of Ansible CS
+===========================
+ACS would have following
+- Ansible [ Tool ]
+	- Many Executables
+	- Lots of Module
+	- Config file
+- Deployment Script (aka Playbook) by US
+- Inventory by US
+=============================================
+What is Module?
+-------------------------
+cp 	src 		dest
+cp 	file1.txt 	c:/temp
+cmd	param1		param2		
+------------------------
+Code in Ansible
+Unit of Work --- 
+Module would do ONE thing
+Require Parameter
+Such as
+copy, delete, service, yum, apt, user
+3000++++++ 5000++ Playbooks
+https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
+-----------------------------
+
+Config file
+------------------------------
+config file
+Ansible has a default behaviour which can be modified by configfile.
+has 200+ options.
+/etc/ansible/ansible.cfg
+-------------------------------
+Inventory
+	LIST OF IP Address of remote server
+	----
+	- a file which has list of ARS IP address.
+	- has a group.
+------------------------------
+Playbook 
+----------
+- Has multiple Play
+- Yaml file
+	- varaibles
+	- conditioning
+	- Looping
+	- functions
+
+What is Play?
+--------------
+	HOSTS: GROUP OF INVENTORY
+	TASKS:
+		TASK1
+		- Module and Its param
+
+		TASK2
+		- Module and Its param
+
+		TASK3
+		- Module and Its param
+	HOSTS: GROUP OF INVENTORY
+	TASKS:
+		TASK1
+		- Module and Its param
+
+		TASK2
+		- Module and Its param
+
+		TASK3
+		- Module and Its param
+
+================================================
+3 Server
+-------------
+1 - ACS
+3.6.36.140
+centos
+centos123
+https://www.devopsschool.com/blog/how-to-install-ansible-in-centos-7-rhel-7/
+
+$ sudo yum install wget -y
+$ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ sudo rpm -i epel-release-latest-7.noarch.rpm
+$ sudo yum install ansible -y
+
+
+
+2 - ARS
+13.127.187.65
+13.234.34.20
+===================================
+What is your Project OR Requirement?
+===================================
+Write a script(playbook) which would deploy webserver in ARS.
+=================================
+psu code
+
+- install httpd	
+	yum and its param			
+- copy index.html(package) to /var/www/html
+	copy and its param
+- Start a service
+	service and its param
+
+---
+- name: This sets up an httpd webserver
+  hosts: web
+  tasks:
+  - name: Install the httpd apps
+    yum: name=httpd state=present
+  - name: start the httpd service
+    service: name=httpd state=started
+  - name: create a empty fle
+    file: dest=/opt/test.txt state=touch
+  - name: copy a file
+    copy: dest=/var/www/html/ src="index.html"
+...
+
+===========================================================
+===========================================================
+ansible-playbook -i inventory webserver-deploy.yaml -u centos --key-file=remote.pem -b
+
+===========================================================
+===========================================================
+Add a module in existing playbook.
+=================================
+download a file from 
+http://15.206.169.2:8082/ui/api/v1/download?repoKey=all&path=com%2Fdhl%2Fsoftware%2Fchat%2F1.0%2Fchat-1.0.jar
+
+copy into
+/var/www/html/yourname.jar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Continuous Integration using Jenkins
